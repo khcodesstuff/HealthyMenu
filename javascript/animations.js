@@ -13,14 +13,16 @@ $(function () {
 });
 
 const anim_based_on_scroll = (block, element_query, animation, offset_btm=0) => {
-    if (is_scrolled_under(block)){
-        animateCSS_reset(element_query, animation);
-    }
-    else if (is_scrolled_over(block)){
-        animateCSS_reset(element_query, animation);
-    }
-    else if (is_scrolled_to_bottom(block, offset_btm)){
-        animateCSS(element_query, animation);
+    if (! window.matchMedia('(max-width: 800px)').matches){
+        if (is_scrolled_under(block)){
+            animateCSS_reset(element_query, animation);
+        }
+        else if (is_scrolled_over(block)){
+            animateCSS_reset(element_query, animation);
+        }
+        else if (is_scrolled_to_bottom(block, offset_btm)){
+            animateCSS(element_query, animation);
+        }
     }
 }
 

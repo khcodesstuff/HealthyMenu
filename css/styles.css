@@ -291,6 +291,7 @@ h2 {
     bottom: -50px;
     width: 100vw;
     text-align: center;
+    visibility: visible;
   }
   .block-colorful .content-flex .design-text h1 {
     font-size: 100pt;
